@@ -1,5 +1,5 @@
 import React from 'react';
-import TableRow from './row';
+import TableRow from '../collapsable-table-row';
 import './index.css';
 
 export default class CollapsableTable extends React.Component {
