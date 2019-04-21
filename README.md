@@ -1,3 +1,11 @@
+## React Collapsable Panel
+
+Hosted on Heroku
+
+https://react-collapsable-panel.herokuapp.com/
+
+Simple React app showing a collapsable component
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
