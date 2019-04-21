@@ -20,7 +20,7 @@ export default class CollapsableTable extends React.Component {
 
                 <table id='d-table'>
                     <tbody>
-                        {(this.props.data).map((el, index) => {
+                        {(this.props.filteredData).map((el, index) => {
                             return (
                                 <TableRow
                                     key={el.id.toString()}
