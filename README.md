@@ -4,7 +4,7 @@ Hosted on Heroku
 
 https://react-collapsable-panel.herokuapp.com/
 
-Simple React app showing a collapsable component
+Simple React app showing a collapsable component with filtering.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
