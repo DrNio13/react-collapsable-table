@@ -1,0 +1,28 @@
+#d-table {
+    width: 100%;
+    max-width: 700px;
+    text-align: left;
+}
+
+#d-table tr {
+    display: table-row;
+    border: 1px solid black;
+}
+
+#d-table .title {
+    padding: 20px;
+    background: whitesmoke;
+    border: 1px solid #ccc;
+}
+
+#d-table .content {
+    padding: 20px;
+}
+
+#d-table .visible {
+    display: table-row;
+}
+
+#d-table .invisible {
+    display: none;
+}

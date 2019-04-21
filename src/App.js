@@ -1,26 +1,44 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import CollapsableTable from './components/collapsable-table'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      data: [
+        { id: 1, title: 'Title 1', data: 'More details here 1', isVisible: true }, // optionally first row to be visible
+        { id: 2, title: 'Title 2', data: 'More details here 2' },
+        { id: 3, title: 'Title 3', data: 'More details here 3' },
+        { id: 4, title: 'Title 4', data: 'More details here 4' },
+      ]
+    }
+
+    this.toggleRow = this.toggleRow.bind(this)
+  }
+
+  toggleRow = (el) => {
+
+    this.setState(previousState => {
+      const items = previousState.data.map((item) => {
+        if (item.id === el.id) {
+          return { ...item, isVisible: !item.isVisible }
+        }
+
+        return item
+      })
+
+      return {
+        data: items
+      }
+    })
+  }
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <React.Fragment>
+        <CollapsableTable {...this.state} toggleRow={this.toggleRow} />
+      </React.Fragment>
     );
   }
 }
